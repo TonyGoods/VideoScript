@@ -2,5 +2,47 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_131"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/JSoup/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/client-combined-3.14.0 - .jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/htmlunit-driver-2.32.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/htmlunit-2.32.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/htmlunit-core-js-2.32.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/htmlunit-cssparser-1.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/animal-sniffer-annotations-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/checker-compat-qual-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-lang3-3.7.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-net-3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/commons-text-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/error_prone_annotations-2.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/httpclient-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/httpcore-4.4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/httpmime-4.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/j2objc-annotations-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jetty-client-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jetty-http-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jetty-io-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jetty-util-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jetty-xml-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/jsr305-1.3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/neko-htmlunit-2.32.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/selenium-api-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/selenium-remote-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/selenium-support-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/websocket-api-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/websocket-client-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/websocket-common-9.4.11.v20180605.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/webdriver/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/JSON/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
