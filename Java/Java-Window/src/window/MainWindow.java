@@ -46,6 +46,8 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -188,39 +190,44 @@ public class MainWindow extends JFrame {
 									HttpsURLConnection m3u8Https = (HttpsURLConnection) m3u8URL.openConnection();
 									int index = 1;
 									if (m3u8Https.getResponseCode() == 200) {
+										System.out.println(System.getProperty("user.dir"));
+										File dir = new File("../../Python");
+										System.out.println(dir.getAbsolutePath());
+										System.out.println(dir.getCanonicalPath());
 										BufferedReader m3u8Reader = new BufferedReader(
 												new InputStreamReader(m3u8Https.getInputStream()));
 										String m3u8Line;
 
 										while ((m3u8Line = m3u8Reader.readLine()) != null) {
 											if (m3u8Line.indexOf('#') != 0) {
-												webDriver.get(tsWebLinkTitle + m3u8Line);
-												
-												File file = new File(
-														"C:\\Users\\Administrator\\Desktop\\" + title + index + ".ts");
-												if (file.exists()) {
-													file.delete();
-												}
-												file.createNewFile();
+												/*
+												 * (webDriver.get(tsWebLinkTitle + m3u8Line);
+												 * 
+												 * File file = new File(
+												 * "C:\\Users\\Administrator\\Desktop\\" + title + index + ".ts"); if
+												 * (file.exists()) { file.delete(); } file.createNewFile();
+												 */
 												URL tsURL = new URL(tsWebLinkTitle + m3u8Line);
 												System.out.println(tsWebLinkTitle + m3u8Line);
-												HttpsURLConnection tsUrlConnection = (HttpsURLConnection) tsURL
-														.openConnection();
-												if (tsUrlConnection.getResponseCode() == 200) {
-													BufferedReader tsReader = new BufferedReader(
-															new InputStreamReader(tsUrlConnection.getInputStream()));
-													BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-													String tsLine;
-													while ((tsLine = tsReader.readLine()) != null) {
-														writer.write(webDriver.getPageSource());
-														// writer.write(tsLine);
-														// System.out.println(tsLine);
-													}
-													writer.flush();
-													writer.close();
-													tsReader.close();
+												/*
+												 * .openConnection(); if (tsUrlConnection.getResponseCode() == 200) {
+												 * BufferedReader tsReader = new BufferedReader( new
+												 * InputStreamReader(tsUrlConnection.getInputStream())); BufferedWriter
+												 * writer = new BufferedWriter(new FileWriter(file)); String tsLine;
+												 * while ((tsLine = tsReader.readLine()) != null) {
+												 * writer.write(webDriver.getPageSource()); // writer.write(tsLine); //
+												 * System.out.println(tsLine); } writer.flush(); writer.close();
+												 * tsReader.close(); }
+												 */
+												Runtime rt = Runtime.getRuntime();
+												Process proc = rt.exec("python downloadM3u8.py " + tsWebLinkTitle
+														+ m3u8Line + " " + "C:\\Users\\Administrator\\Desktop\\1.ts");
+												BufferedReader reader1 = new BufferedReader(
+														new InputStreamReader(proc.getInputStream()));
+												String line1;
+												while ((line1 = reader1.readLine()) != null) {
+													System.out.println(line1);
 												}
-												index++;
 											}
 										}
 									}
