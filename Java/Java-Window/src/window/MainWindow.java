@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import java.io.File;
 
 public class MainWindow extends JFrame {
@@ -30,7 +31,7 @@ public class MainWindow extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtWeb;
 	private JTextField txtField;
-	private final String[] websites = new String[] { "Öªºõ", "°Ù¶È" };
+	private final String[] websites = new String[] { "çŸ¥ä¹", "ç™¾åº¦" };
 	private String website = websites[0];
 
 	public static void main(String[] args) {
@@ -63,7 +64,7 @@ public class MainWindow extends JFrame {
 		contentPane.add(pnlFactor);
 		pnlFactor.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 5));
 
-		JLabel lblWebsite = new JLabel("ÊÓÆµËùÔÚÍøÕ¾£º");
+		JLabel lblWebsite = new JLabel("è§†é¢‘æ‰€åœ¨ç½‘ç«™ï¼š");
 		pnlFactor.add(lblWebsite);
 
 		JComboBox<String> webList = new JComboBox<String>();
@@ -75,7 +76,7 @@ public class MainWindow extends JFrame {
 		webList.setModel(new DefaultComboBoxModel<String>(websites));
 		pnlFactor.add(webList);
 
-		JLabel lblWeblink = new JLabel("ÊÓÆµÍøÖ·£º");
+		JLabel lblWeblink = new JLabel("è§†é¢‘ç½‘å€ï¼š");
 		pnlFactor.add(lblWeblink);
 
 		txtWeb = new JTextField();
@@ -86,7 +87,7 @@ public class MainWindow extends JFrame {
 		contentPane.add(pnlSave);
 		pnlSave.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 5));
 
-		JLabel lblSave = new JLabel("ÊÓÆµ±£´æµØÖ·£º");
+		JLabel lblSave = new JLabel("è§†é¢‘ä¿å­˜åœ°å€ï¼š");
 		pnlSave.add(lblSave);
 
 		txtField = new JTextField();
@@ -94,7 +95,7 @@ public class MainWindow extends JFrame {
 		pnlSave.add(txtField);
 		txtField.setColumns(44);
 
-		JButton btnField = new JButton("Ñ¡ÔñÎÄ¼ş¼Ğ");
+		JButton btnField = new JButton("é€‰æ‹©æ–‡ä»¶å¤¹");
 		btnField.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -104,7 +105,7 @@ public class MainWindow extends JFrame {
 				jfc.showOpenDialog(null);
 				File file = jfc.getSelectedFile();
 				if (file == null || !file.exists()) {
-					JOptionPane.showMessageDialog(null, "²»´æÔÚµÄ±£´æµØÖ·£¬ÇëÖØĞÂÑ¡Ôñ£¡");
+					JOptionPane.showMessageDialog(null, "ä¸å­˜åœ¨çš„ä¿å­˜åœ°å€ï¼Œè¯·é‡æ–°é€‰æ‹©ï¼");
 					return;
 				}
 				txtField.setText(file.getAbsolutePath());
@@ -112,23 +113,24 @@ public class MainWindow extends JFrame {
 		});
 		pnlSave.add(btnField);
 
-		JButton btnStart = new JButton("¿ªÊ¼ÏÂÔØ");
+		JButton btnStart = new JButton("å¼€å§‹ä¸‹è½½");
 		btnStart.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (txtField.getText().isEmpty() || txtWeb.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Çë½«ĞÅÏ¢ÌîĞ´ÍêÕû£¡");
+					JOptionPane.showMessageDialog(null, "è¯·å°†ä¿¡æ¯å¡«å†™å®Œæ•´ï¼");
 					return;
 				} else {
-					if (website.equals("Öªºõ")) {
+					if (website.equals("çŸ¥ä¹")) {
 						Zhihu zhihu = new Zhihu(txtWeb.getText(), txtField.getText());
 						if (zhihu.download()) {
-							JOptionPane.showMessageDialog(null, "ÏÂÔØ³É¹¦");
+							JOptionPane.showMessageDialog(null, "ä¸‹è½½æˆåŠŸ");
 						} else {
-							JOptionPane.showMessageDialog(null, "ÏÂÔØÊ§°Ü£¬Çë¼ì²éÍøÖ·¡¢ÎÄ¼şµØÖ·ºÍÍøÂç£¡");
+							JOptionPane.showMessageDialog(null, "ä¸‹è½½å¤±è´¥ï¼Œè¯·æ£€æŸ¥ç½‘å€ã€æ–‡ä»¶åœ°å€å’Œç½‘ç»œï¼");
 						}
 					}
 				}
+
 			}
 		});
 		pnlSave.add(btnStart);
